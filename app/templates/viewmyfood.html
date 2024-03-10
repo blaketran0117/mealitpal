@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>My Food Items</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Expired Date</th>
+                <th>Protein</th>
+                <th>Fat</th>
+                <th>Carbohydrate</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for food in foods %}
+            <tr>
+                <td>{{ food.expired_date }}</td>
+                <td>{{ food.protein }}</td>
+                <td>{{ food.fat }}</td>
+                <td>{{ food.carb }}</td>
+                <td>{{food.name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

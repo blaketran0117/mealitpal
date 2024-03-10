@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Add Food</h1>
+    <form method="POST" action="{{ url_for('add_food_form', user_id=user_id) }}">
+        <div class="form-group">
+            <label for="expired_date">Expiration Date</label>
+            <input type="date" class="form-control" id="expired_date" name="expired_date" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="string" step="0.01" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="protein">Protein</label>
+            <input type="number" step="0.01" class="form-control" id="protein" name="protein" required>
+        </div>
+        <div class="form-group">
+            <label for="fat">Fat</label>
+            <input type="number" step="0.01" class="form-control" id="fat" name="fat" required>
+        </div>
+        <div class="form-group">
+            <label for="carb">Carbohydrate</label>
+            <input type="number" step="0.01" class="form-control" id="carb" name="carb" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Food</button>
+    </form>
+</div>
+{% endblock %}

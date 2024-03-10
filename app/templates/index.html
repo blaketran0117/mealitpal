@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1 class="display-4">Welcome to MealitPal!</h1>
+        <p class="lead">Track the food in your fridge easily with MealitPal.</p>
+        <hr class="my-4">
+        <p>Get started by signing up or logging in.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('signup') }}" role="button">Sign Up</a>
+        <a class="btn btn-secondary btn-lg" href="{{ url_for('login') }}"" role="button">Log In</a>
+      </div>
+      <div class="col-lg-6">
+        <img src="../static/images/meal-prep_hero.jpg" class="img-fluid" alt="Fresh Vegetables">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
